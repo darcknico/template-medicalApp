@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Environment } from '@ionic-native/google-maps';
+import * as moment from 'moment';
+import 'moment/locale/es';
 
 @Component({
   selector: 'app-root',
@@ -57,6 +60,14 @@ export class AppComponent implements OnInit {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      moment.locale("es");
+
+      if(this.platform.is('cordova')){
+        Environment.setEnv({
+          'API_KEY_FOR_BROWSER_RELEASE': '',
+          'API_KEY_FOR_BROWSER_DEBUG': '',
+        });
+      }
     });
   }
 

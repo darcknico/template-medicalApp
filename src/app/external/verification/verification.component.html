@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="body-part">
+    <ion-img src="./assets/img/logo.png" class="ion-margin ion-padding"></ion-img>
+    <ion-title class="ion-text-center">Verification</ion-title>
+    <ion-text class="ion-text-center">
+      <p>Insert your code here:</p>
+    </ion-text>
+    <app-verification-input></app-verification-input>
+    <ion-button (click)="onClickContinue()" class="ion-margin-top"
+      expand="block" fill="solid" 
+      shape="round" mode="ios" color="primary">
+      Continue
+    </ion-button>
+  </div>
+  <div class="footer-part">
+    
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true" class="ion-no-padding">
+  <div class="header-part ion-padding">
+    <ion-item lines="none" class="item-input ion-margin-bottom ">
+      <ion-icon slot="start" name="location" color="primary"></ion-icon>
+      <ion-input type="text" inputmode="tel" placeholder="Your Location" [(ngModel)]="locationInput"></ion-input>
+      <ion-icon slot="end" name="close-outline" *ngIf="locationInput.length>0" (click)="onClickClear()"></ion-icon>
+    </ion-item>
+  </div>
+  
+  <div id="map_canvas"></div>
+  <div class="footer-part ion-padding">
+    <ion-button (click)="onClickContinue()" 
+      expand="block" fill="solid" 
+      shape="round" mode="ios" color="primary">
+      Confirm
+    </ion-button>
+  </div>
+</ion-content>

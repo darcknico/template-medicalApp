@@ -1,0 +1,10 @@
+<ion-item lines="full">
+  <ion-label>
+    <p>{{item.date}}</p>
+    <h2>{{item.name}}</h2>
+  </ion-label>
+  <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" mode="ios">
+    <ion-icon slot="start" name="cloud-download-outline"></ion-icon>
+    <b>Download</b>
+  </ion-button>
+</ion-item>

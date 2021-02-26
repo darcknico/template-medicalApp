@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="body-part">
+    <ion-img src="./assets/img/logo.png" class="ion-margin ion-padding"></ion-img>
+    <ion-title class="ion-text-center">Location</ion-title>
+    <ion-text class="ion-text-center">
+      <p>Please enter you location</p>
+    </ion-text>
+    <ion-item lines="none" class="item-input ion-margin-bottom">
+      <ion-icon slot="start" name="location" color="primary"></ion-icon>
+      <ion-input type="text" inputmode="tel" placeholder="Your Location" [(ngModel)]="locationInput"></ion-input>
+      <ion-icon slot="end" name="close-outline" *ngIf="locationInput.length>0" (click)="onClickClear()"></ion-icon>
+    </ion-item>
+      
+    <ion-button (click)="onClickContinue()" expand="block" fill="solid" shape="round" mode="ios" color="primary">
+      Confirm
+    </ion-button>
+  </div>
+  <div class="footer-part">
+    
+  </div>
+</ion-content>

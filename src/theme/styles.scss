@@ -1,0 +1,121 @@
+ion-content{
+    background: #ECF1FA;
+    --background: #ECF1FA;
+}
+ion-button{
+    --border-radius: 10px;
+}
+
+ion-title{
+    font-weight: bold;
+    color: var(--ion-color-primary);
+}
+
+.item-input{
+    --border-radius: 10px;
+}
+ion-select {
+    color: var(--ion-color-primary);
+}
+
+.card-title{
+    font-weight: bold;
+    color: var(--ion-color-primary);
+}
+
+.color-success{
+    color: var(--ion-color-success);
+}
+
+.background-primary{
+    background: #ECF1FA;
+    --background: #ECF1FA;
+}
+
+
+.credit-card{
+    ion-grid.cardON {
+        background-color: #4284ff;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+        max-width: 400px !important;
+        .msg {
+            background-color: #679cff;
+        }
+    }
+    ion-grid.cardOFF {
+        background-color: #bbb7b7;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+        max-width: 400px !important;
+        .msg {
+            background-color: #d4d4d4;
+        }
+    }
+    .msg {
+        float: left;
+        padding: 5px;
+        padding-right: 8px;
+        padding-left: 8px;
+        font-size: 0.8em;
+        color: white;
+        border-radius: 5px;
+    }
+    .number {
+        color: white;
+        font-size: 1.5em;
+        line-height: 2em;
+        text-align: center;
+    }
+    .digits {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .date {
+        color: white;
+        font-size: 0.8em;
+    }
+    .bank {
+        text-align: right;
+        color: white;
+        font-size: 0.8em;
+    }
+    .ON {
+        height: 8px;
+        width: 8px;
+        background-color: #8de278;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 2px;
+    }
+    .OFF {
+        height: 8px;
+        width: 8px;
+        background-color: #fb5f5f;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 2px;
+    }
+    .brand {
+        max-width: 40%;
+        float: right;
+    }
+    .chip {
+        img {
+            max-width: 50px;
+            padding-top: 5%;
+            border-radius: 10% !important;
+            overflow: hidden;
+        }
+    }
+    ion-icon#power {
+        font-size: 2em;
+    }
+}
+
+.card-input{
+    margin-top: 3px;
+    margin-bottom: 7px;
+}

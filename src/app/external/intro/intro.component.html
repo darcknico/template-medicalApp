@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true" class="ion-padding" scroll-y="false" class="ion-no-margin ">
+  <ion-slides pager="true" [options]="slideOpts" #pageSlider>
+
+    <ion-slide class="pageSlider1">
+      <div class="slide">
+        <img src="./slide-1.png"/>
+        <h2>Find your Doctor</h2>
+        <div class="slide-image">
+          <ion-img src="./assets/img/intro01.png"></ion-img>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="pageSlider2">
+      <div class="slide">
+        <img src="./slide-2.png"/>
+        <h2>Storage your<br/>Medical Records</h2>
+        <div class="slide-image">
+          <ion-img src="./assets/img/intro02.png"></ion-img>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="pageSlider3">
+      <div class="slide">
+        <img src="./slide-3.png"/>
+        <h2>Discuss in the Forum</h2>
+        <div class="slide-image">
+          <ion-img src="./assets/img/intro03.png"></ion-img>
+        </div>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+  <div class="controls-button ion-justify-content-between ion-padding">
+    <ion-button (click)="onClickSkip()" fill="clear">Skip</ion-button>
+    <ion-button (click)="swipeNext()" fill="clear">Next</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header mode="ios" class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="secondary">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" color="secondary">
+      <ion-button >
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text >
+          <h4>Leave your feedback</h4>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <app-item-appointment type="item"></app-item-appointment>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ionic5-star-rating
+          activeColor="yellow"
+          maxRating="5"
+          [rating]="3"
+          fontSize="3rem"
+          >
+        </ionic5-star-rating>
+    </ion-row>
+    <ion-row class="ion-margin-top">
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-input">
+          <ion-textarea rows="10" class="ion-margin"
+            placeholder="Write your feedback"></ion-textarea>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onClickContinue()" expand="block" fill="solid" shape="round" mode="ios">
+      Add to feedback
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

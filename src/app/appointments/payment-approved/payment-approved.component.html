@@ -1,0 +1,59 @@
+<ion-header mode="ios" class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="secondary">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" color="secondary">
+      <ion-button >
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text >
+          <h4>
+            <ion-icon name="checkmark-circle" color="success"></ion-icon>
+            Appointment Confirmed!
+          </h4>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div class="schedule-view">
+          <h1 class="ion-no-margin">Thu, 09 Apr <span class="color-success">08:00</span></h1>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item lines="full">
+          <ion-icon slot="start" name="location" color="primary"></ion-icon>
+          <ion-label>
+            <ion-text class="ion-text-wrap">
+              <h5><b>Dr. Clara odding Confirmation</b></h5>
+              <p> 2 Rue de Ermesinde Frisange - Luxembourg 3 km </p>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="view-image">
+    <ion-img src="./assets/img/confirmed.png"></ion-img>
+  </div>
+  <ion-text color="primary" class="ion-text-center ion-margin">
+    <p>2 days 3 hours before the appointment</p>
+  </ion-text>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onClickContinue()" expand="block" fill="solid" shape="round" mode="ios">
+      Add to calendar
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,73 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="secondary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" color="secondary">
+      <ion-button >
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-home">
+          <ion-item mode="ios" lines="none">
+            <ion-input placeholder="Search"></ion-input>
+            <ion-icon slot="end" name="search"></ion-icon>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card mode="ios" class="card-home" (click)="onClickAppointments()">
+          <ion-card-header>
+            <h5 class="card-title">Appointments</h5>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="./assets/img/intro04.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card mode="ios" class="card-home" (click)="onClickRecords()">
+          <ion-card-header>
+            <h5 class="card-title">Records</h5>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="./assets/img/intro02.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card mode="ios" class="card-home" (click)="onClickForums()">
+          <ion-card-header>
+            <h5 class="card-title">Forum</h5>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="./assets/img/intro03.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card mode="ios" class="card-home" (click)="onClickAccount()">
+          <ion-card-header>
+            <h5 class="card-title">Account Settings</h5>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-img src="./assets/img/intro01.png"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

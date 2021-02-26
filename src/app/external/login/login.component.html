@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="body-part">
+    <ion-img src="./assets/img/logo.png" class="ion-margin ion-padding"></ion-img>
+    <ion-title class="ion-text-center">Welcome</ion-title>
+    <ion-text class="ion-text-center">
+      <p>Sign in the continue</p>
+    </ion-text>
+    <ion-button (click)="onClickRegister()" expand="block" fill="solid" shape="round" mode="ios" color="primary">
+      Sign in with mobile number
+    </ion-button>
+    <ion-text class="ion-text-center">
+      <p>or</p>
+    </ion-text>
+    <ion-button (click)="onClickRegister()" expand="block" fill="solid" shape="round" mode="ios" color="primary">
+      Sign in with Facebook
+    </ion-button>
+  </div>
+  <div class="footer-part">
+    <ion-text class="ion-text-center">
+      <p>
+        By signing in, you accept our <ion-text color="secondary">Terms and Conditions</ion-text>
+      </p>
+    </ion-text>
+  </div>
+</ion-content>

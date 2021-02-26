@@ -1,0 +1,32 @@
+<ion-item lines="full" (click)="onClick()">
+  <ion-thumbnail slot="start">
+    <img src="./assets/img/no-photo.png" />
+  </ion-thumbnail>
+  <ion-label>
+    <h4><b>{{item.name}}</b></h4>
+      <ion-text>
+        {{item.specialist}}
+      </ion-text>
+      <br/>
+      <ion-text>
+        {{item.address}}
+      </ion-text>
+      <ion-row>
+        <ionic5-star-rating
+          activeColor="yellow"
+          maxRating="5"
+          readonly="true"
+          [rating]="item.stars"
+          fontSize="17px"
+          >
+        </ionic5-star-rating> 
+        <ion-text>
+          ({{item.reviews}})
+        </ion-text>
+      </ion-row>
+      
+  </ion-label>
+  <ion-button fill="clear" slot="end" *ngIf="type=='list'">
+    <ion-icon slot="icon-only" name="settings"></ion-icon>
+  </ion-button>
+</ion-item>

@@ -1,0 +1,127 @@
+<ion-header mode="ios" class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="secondary">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" color="secondary">
+      <ion-button >
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text >
+          <h4>Dr. Clara odding Confirmation</h4>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div class="schedule-view">
+          <h1 class="ion-no-margin">Thu, 09 Apr <span class="color-success">08:00</span></h1>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item lines="full">
+          <ion-icon slot="start" name="location" color="primary"></ion-icon>
+          <ion-label>
+            <ion-text class="ion-text-wrap">
+              <p> 2 Rue de Ermesinde Frisange - Luxembourg 3 km </p>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-input">
+          <ion-item lines="none">
+            <ion-input placeholder="Message"></ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-input">
+          <ion-item lines="none">
+            <ion-input placeholder="Reason of the visit"></ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text color="primary">
+          <h1 class="ion-no-margin">Check + Scaling</h1>
+          <h1 class="ion-no-margin">124€</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text color="primary">
+          <h5><b>Select the card</b></h5>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-slides [options]="slideOptsCreditCard" >
+    <ion-slide *ngFor="let card of cards">
+      <div  class="credit-card">
+        <ion-grid [class.cardON]="card.state=='ON'" [class.cardOFF]="card.state=='OFF'">
+          <ion-row>
+            <ion-col class="state">
+              <div class="msg">
+                <span [class.ON]="card.state=='ON'" [class.OFF]="card.state=='OFF'"></span> Card {{card.state}}
+              </div>
+            </ion-col>
+            <ion-col class="logo">
+              <img class="brand" [src]="card.logo">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="chip">
+              <img src="assets/img/chip.png">
+            </ion-col>
+          </ion-row>
+          <ion-row class="digits">
+            <ion-col class="number">
+              {{card.a}}
+            </ion-col>
+            <ion-col class="number">
+              {{card.b}}
+            </ion-col>
+            <ion-col class="number">
+              {{card.c}}
+            </ion-col>
+            <ion-col class="number">
+              {{card.d}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="date">
+              Expires: {{card.expires}}
+            </ion-col>
+            <ion-col class="bank">
+              {{card.bank}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onClickContinue()" expand="block" fill="solid" shape="round" mode="ios">
+      Pay now
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

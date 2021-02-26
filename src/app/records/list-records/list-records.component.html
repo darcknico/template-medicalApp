@@ -1,0 +1,45 @@
+<ion-header mode="md" class="ion-no-border background-primary" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="secondary">
+      <ion-back-button text="" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" color="secondary">
+      <ion-button >
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Medical Records</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-input">
+          <ion-item mode="ios" lines="none">
+            <ion-input placeholder="Search"></ion-input>
+            <ion-icon slot="end" name="search"></ion-icon>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="view-list">
+    <ion-segment value="1">
+      <ion-segment-button value="1">
+        <ion-label>Clinics</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>Lab</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="3">
+        <ion-label>Medicines</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ng-container *ngFor="let item of items">
+      <app-item-record [item]="item" ></app-item-record>
+    </ng-container>
+  </div>
+</ion-content>

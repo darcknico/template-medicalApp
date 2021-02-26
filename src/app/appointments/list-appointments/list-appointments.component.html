@@ -1,0 +1,70 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" color="secondary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" color="secondary">
+      <ion-button >
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Book an appointment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-appointment">
+          <ion-item mode="ios" lines="none">
+            <ion-icon slot="start" name="search" color="primary"></ion-icon>
+            <ion-input placeholder="Doctor, Specialities..."></ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-appointment">
+          <ion-item mode="ios" lines="none">
+            <ion-icon slot="start" name="location" color="primary"></ion-icon>
+            <ion-input placeholder="Select Area"></ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" class="card-appointment">
+          <ion-item mode="ios" lines="none">
+            <ion-icon slot="start" name="calendar" color="primary"></ion-icon>
+            <ion-input placeholder="Select Date"></ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button mode="ios" expand="block" fill="solid" shape="round">
+          Search
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10">
+        <ion-label>All Specialities</ion-label>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button fill="clear">
+          <ion-icon slot="icon-only" name="settings"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ng-container *ngFor="let item of items">
+    <app-item-appointment [item]="item" ></app-item-appointment>
+  </ng-container>
+  
+</ion-content>
